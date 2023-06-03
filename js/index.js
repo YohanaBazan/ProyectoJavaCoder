@@ -51,7 +51,3 @@ console.log('Prendas en tu carrito de compras:');
   } else {
     console.log('Gracias por visitar Skull World. ¡Vuelve pronto!');
   }
-  
-
-  
-  
