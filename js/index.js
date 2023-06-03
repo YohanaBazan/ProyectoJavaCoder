@@ -1,5 +1,5 @@
 
-const tipoDeRopa =[
+const tipoRopa =[
   {name: 'Remera', price: 1500},
   {name: 'Pollera', price:2500},
   {name:'Pantalon', price: 3500},
@@ -13,8 +13,8 @@ if (tienda === 'si') {
   while (true) {
     console.log ('Prendas en stock:');
 
-    for (let i = 0; i < tipoDeRopa.length; i++) {
-      console.log(`${i + 1}. ${tipoDeRopa[i].name} - $${tipoDeRopa[i].price}`);
+    for (let i = 0; i < tipoRopa.length; i++) {
+      console.log(`${i + 1}. ${tipoRopa[i].name} - $${tipoRopa[i].price}`);
     }
     let choice = prompt ('Ingrese el número de prendas que deseas añadir al carrito (o "abandonar" para salir)):');
 
@@ -23,13 +23,13 @@ if (tienda === 'si') {
     }
     else {
       choice =parseInt (choice);
-      if (isNaN(choice) || choice < 1 || choice > tipoDeRopa.length) {
+      if (isNaN(choice) || choice < 1 || choice > tipoRopa.length) {
         console.log('Elección no válida, inténtelo de nuevo.');
       }
       
     else {
-      cart.push(tipoDeRopa[choice - 1]);
-          console.log(`${tipoDeRopa[choice - 1].name} added to cart.`);
+      cart.push(tipoRopa[choice - 1]);
+          console.log(`${tipoRopa[choice - 1].name} added to cart.`);
     }
   }
 }
