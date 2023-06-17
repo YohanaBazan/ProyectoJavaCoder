@@ -1,53 +1,36 @@
 
-const tipoRopa =[
-  {name: 'Remera', price: 1500},
-  {name: 'Pollera', price:2500},
-  {name:'Pantalon', price: 3500},
-  {name: 'Buzo', price: 4000},
-];
-
-let tienda = prompt ('Bienvenidos a Skull World, ¿Deseas ingresar a nuestra tienda? (si/no)').toLowerCase(); 
-
-if (tienda === 'si') {
-  let cart = [];
-  while (true) {
-    console.log ('Prendas en stock:');
-
-    for (let i = 0; i < tipoRopa.length; i++) {
-      console.log(`${i + 1}. ${tipoRopa[i].name} - $${tipoRopa[i].price}`);
-    }
-    let choice = prompt ('Ingrese el número de prendas que deseas añadir al carrito (o "abandonar" para salir)):');
-
-    if (choice === 'abandonar'){
-      break;
-    }
-    else {
-      choice =parseInt (choice);
-      if (isNaN(choice) || choice < 1 || choice > tipoRopa.length) {
-        console.log('Elección no válida, inténtelo de nuevo.');
-      }
-      
-    else {
-      cart.push(tipoRopa[choice - 1]);
-          console.log(`${tipoRopa[choice - 1].name} added to cart.`);
-    }
-  }
+function mostrarMensajeCrearUsuario() {
+  alert("Bienvenidos a Skull World, para crear su cuenta, llene los siguientes campos");
 }
-console.log('Prendas en tu carrito de compras:');
-    for (let i = 0; i < cart.length; i++) {
-      console.log(`${i + 1}. ${cart[i].name} - $${cart[i].price}`);
-    }
-  
-    
-    let total = cart.reduce((acc, item) => acc + item.price, 0);
-    console.log(`Precio total: $${total}`);
 
-    let compra = prompt('¿Deseas completar tu compra? (si/no)').toLowerCase();
-    if (compra === 'si') {
-      console.log('¡Gracias por tu compra!');
-    } else {
-      console.log('Compra cancelada.');
-    }
-  } else {
-    console.log('Gracias por visitar Skull World. ¡Vuelve pronto!');
+function mostrarMensajeUsuarioCreado() {
+  alert("Su cuenta fue creada con éxito. Por favor, inicie sesión");
+}
+
+mostrarMensajeCrearUsuario();
+
+let usuario = prompt("Ingrese su nombre de usuario");
+let clave = prompt("Ingrese su clave de acceso");
+
+mostrarMensajeUsuarioCreado();
+
+let usuarioAutorizado;
+let intento;
+
+for (let i = 0; i < 3; i++) {
+  usuarioAutorizado = prompt("Ingrese su usuario");
+
+  if (usuarioAutorizado !== usuario) {
+      continue;
   }
+
+  intento = prompt("Ingrese su clave");
+
+  if (clave !== intento) {
+      alert("Usuario o clave incorrecta. Vuelva a intentarlo.");
+      continue;
+  }
+
+  alert("Sesión iniciada con éxito");
+  break;
+}
