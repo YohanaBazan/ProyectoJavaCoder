@@ -1,9 +1,57 @@
-const tipoRopa =[
-    {name: 'Remera', price: 1500},
-    {name: 'Pollera', price:2500},
-    {name:'Pantalon', price: 3500},
-    {name: 'Buzo', price: 4000},
-];
+
+class Prenda {
+    constructor (nombre, precio, color){
+        this.nombre = nombre;
+        this.precio = precio;
+        this.color = color;
+    }
+}
+
+const tipoRopa = []
+
+tipoRopa.push (new Prenda('Remera', 1500, 'gris'))
+tipoRopa.push (new Prenda('Pollera', 2500, 'negro'))
+tipoRopa.push (new Prenda('Pantalon', 3500, 'celeste'))
+tipoRopa.push (new Prenda('Buzo', 4000, 'blanco'))
+
+console.table (tipoRopa)
+
+function buscarPrenda (tipoRopa, nombre) {
+    let prendaEncontrada = tipoRopa.find((prenda) => prenda.nombre === nombre);
+    return prendaEncontrada;
+}
+
+
+for (let i=1;i<=2;i++){
+    let prendaBuscada=prompt("Ingresa el nombre de la prenda").toUpperCase();
+    let encontrada= buscarPrenda (tipoRopa,prendaBuscada);
+    if(encontrada != undefined){
+
+        console.log(encontrada);
+    }else{
+        alert('Prenda no disponible');
+    }
+    
+}
+
+
+function buscarPorColor(tipoRopa, color) {
+let prendasEncontradas = tipoRopa.filter((prenda) => prenda.color === color);
+return prendasEncontradas;
+}
+
+for (let i=1;i<=3;i++){
+    let colorBuscado=prompt("Ingresa el color de prenda que buscas").toUpperCase();
+    let encontrado = buscarPorColor(tipoRopa, colorBuscado);
+    if(encontrado !=''){
+        console.table(encontrado);
+    }else{
+        console.table("Color no disponible")
+    }
+}
+
+
+
 function agregarProducto(carrito, indice) {
     if (indice >= 0 && indice < tipoRopa.length) {
     carrito.push(tipoRopa[indice]);

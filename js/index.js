@@ -1,36 +1,81 @@
 
-function mostrarMensajeCrearUsuario() {
+function init(){
+
   alert("Bienvenidos a Skull World, para crear su cuenta, llene los siguientes campos");
+
+let nuevoUsuario = crearUsuario()
+
+  autenticarUsuario(nuevoUsuario)
+
 }
 
-function mostrarMensajeUsuarioCreado() {
-  alert("Su cuenta fue creada con éxito. Por favor, inicie sesión");
-}
 
-mostrarMensajeCrearUsuario();
+function crearUsuario(){
 
-let usuario = prompt("Ingrese su nombre de usuario");
-let clave = prompt("Ingrese su clave de acceso");
+  let usuario = {nombre:"",clave:""}
 
-mostrarMensajeUsuarioCreado();
+  usuario.nombre = prompt("Ingrese su nombre de usuario");
 
-let usuarioAutorizado;
-let intento;
+  usuario.clave= prompt("Ingrese su clave de acceso");
 
-for (let i = 0; i < 3; i++) {
-  usuarioAutorizado = prompt("Ingrese su usuario");
+  if(usuario.nombre && usuario.clave !== undefined){
 
-  if (usuarioAutorizado !== usuario) {
-      continue;
+    alert("Su cuenta fue creada con éxito. Por favor, inicie sesión");
+
+    return usuario
+
+  }else{
+
+    alert("error al crear el usuario")
+
   }
 
-  intento = prompt("Ingrese su clave");
+}
 
-  if (clave !== intento) {
-      alert("Usuario o clave incorrecta. Vuelva a intentarlo.");
-      continue;
+
+function autenticarUsuario(u){
+
+
+
+  for (let i = 0; i < 3; i++) {
+
+    let usuarioAutenticacion = prompt("Ingrese su usuario");
+
+    let claveUsuario;
+
+    if (u.nombre == usuarioAutenticacion) {
+
+      claveUsuario = prompt("introduzca su clave")
+
+      if(u.clave == claveUsuario){
+
+        alert("Usuario valido, iniciando sistema")
+
+        i = 4;
+
+      }else{
+
+        alert("clave no valida")
+
+        i++
+
+      }
+
+    }else{
+
+      alert("Usuario no valido")
+
+      i++;
+
+
+    }
+
+
   }
 
-  alert("Sesión iniciada con éxito");
-  break;
 }
+
+
+
+
+
