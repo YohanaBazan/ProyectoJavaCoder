@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Delius&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&family=Delius&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&family=Delius&display=swap");
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);*/
+
+
+.logo {
+    height: 165px;
+    width: 100%;
+    background-color: rgb(247, 184, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    height: 200px;
+    width: 220px;
+}
+
+.hero {
+    text-align: center;
+    width: 100%;
+    height: 40vh;
+}
+
+.hero h1 {
+    color: #050606;
+    font-size: 70px;
+    font-family: 'Delius', cursive;
+    text-align: center;
+}
+
+.hero h2 {
+    text-align: center;
+    color: black;
+    font-size: 35px;
+}
+
+.coleccion h2 {
+    font-size: 45px;
+    align-items: center;
+    color: white;
+    text-align: center;
+    -webkit-text-stroke: 1px black;
+}
+
+.container {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+.container img {
+    width: 300px;
+    height: 400px;
+}
+
+.container h2 {
+    text-align: center;
+    font-size: 22px;
+    height: 27px;
+    font-size: 'Comic Neue', cursive;
+    border-radius: 5px 5px 5px 5px;
+    background-color: whitesmoke;
+}
+
+.container p {
+    text-align: center;
+    font-size: 22px;
+    height: 27px;
+    font-size: 'Comic Neue', cursive;
+    border-radius: 5px 5px 5px 5px;
+    background-color: whitesmoke;
+
+}
+
+.comprar button {
+    border-radius: 5px 5px 5px 5px;
+    background-color: rgb(246, 205, 224);
+    padding: 10px 110px 10px 110px;
+    font-size: 15px;
+}
+
+#contenedor {
+    height: 100%;
+    width: 100%;
+    background-color: #F4F7F5;
+}
+
+.divContenedor {
+    height: 100%;
+}
+
+
+.divTexto {
+    background: #AB92BF;
+    padding-left: 10%;
+    padding-top: 15px;
+}
+
+
+.h2 {
+    font-family: 'Comic Neue', cursive;
+    font-size: 25px;
+    text-align: center;
+}
+
+.divGrid {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: "form info";
+}
+
+.divForm {
+    grid: form;
+    width: 80%;
+    margin: auto;
+}
+
+.divForm form {
+    background-color: white;
+    margin: 30px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+.divForm form label {
+    margin-left: 8px;
+}
+
+.divForm form input {
+    height: 45px;
+    border-radius: 8px;
+    margin: 8px;
+    padding: 8px;
+}
+
+.inputComentario {
+    height: 100px;
+}
+
+.botonForm {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    background-color:#BC9FBB;
+    width: 97%;
+    margin-left: 6px;
+}
+
+.info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.info div {
+    margin-bottom: 16px;
+}
+
+.info div p span {
+    font-weight: 600;
+    font-size: medium;
+    margin-bottom: 2px;
+}
+
+
+

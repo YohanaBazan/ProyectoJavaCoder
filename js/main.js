@@ -1,4 +1,7 @@
 
+
+
+
 class Prenda {
     constructor (nombre, precio, color){
         this.nombre = nombre;
@@ -34,7 +37,6 @@ for (let i=1;i<=2;i++){
     
 }
 
-
 function buscarPorColor(tipoRopa, color) {
 let prendasEncontradas = tipoRopa.filter((prenda) => prenda.color === color);
 return prendasEncontradas;
@@ -49,7 +51,6 @@ for (let i=1;i<=3;i++){
         console.table("Color no disponible")
     }
 }
-
 
 
 function agregarProducto(carrito, indice) {
