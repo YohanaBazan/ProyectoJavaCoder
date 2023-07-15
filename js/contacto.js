@@ -1,4 +1,3 @@
-
 const contenedorContactos = document.getElementById("contenedor");
 
 const divContenedor = document.createElement("div");
@@ -71,5 +70,25 @@ form.addEventListener("submit", (e) => {
         localStorage.setItem("consulta", consultaJson);
     }
 });
+function mostrarResultados(consulta) {
+    const resultadosContainer = document.getElementById("resultados");
+    resultadosContainer.innerHTML = "";
+
+    const resultados = document.createElement("div");
+    resultados.className = "resultados";
+    resultados.innerHTML = `
+        <h3>Última consulta:</h3>
+        <p>Nombre: ${consulta.nombre}</p>
+        <p>Teléfono: ${consulta.telefono}</p>
+        <p>Comentario: ${consulta.comentario}</p>
+    `;
+
+    resultadosContainer.appendChild(resultados);
+}
 
 
+const consultaGuardada = localStorage.getItem("consulta");
+if (consultaGuardada) {
+    const consulta = JSON.parse(consultaGuardada);
+    mostrarResultados(consulta);
+}

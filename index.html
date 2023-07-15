@@ -5,29 +5,43 @@
     <meta charset="UTF-8">
     <title>Tienda|Skull World</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/productos.js"></script>
-    <script src="/js/index.js"></script>
-    <script defer src="/js/main.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script defer src="./js/index.js"></script>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="/img/logo.png" Logo">
+    <header id="header">
+        <div class="logo"> 
+            <a href="./index.html"> <img src="./img/logo.png" alt="Logo">
+            </a>
         </div>
+        <nav class="navBar">
+            <button id="boton" class="navToggle" aria-label="abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navMenu" id="lista">
+                <li class="navItem"><a class="navLink" href="./pages/tienda.html">TIENDA</a></li>
+                <li class="navItem"><a class="navLink" href="./pages/usuario.html">CUENTA</a></li>
+                <li class="navItem"><a class="navLink" href="./pages/contacto.html">CONTACTOS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
         <section class="hero">
             <h1>Bienvenidos a Skull World</h1>
             <h2>Una tienda ideada para los amantes de las calaveras</h2>
         </section>
-    </header>
-    <main>
+
+
+
+
+
         <section class="nuevaColeccion">
             <div class="coleccion">
-                <h2>¡Mira nuestros nuevos ingresos!</h2>
+                <h2>¡Mira nuestros nuevos ingresos!</h2>z
             </div>
 
-            <div class="container" >
+            <div class="container">
                 <div class="div-card">
                     <div class="imagen "><img src="/img/remera3.webp" alt=""> </div>
                     <div class="prenda">
@@ -38,9 +52,18 @@
                     </div>
                     <div class="comprar"> <button id="">COMPRAR</button> </div>
 
-            
+
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 
 
-
+/*
 
 class Prenda {
     constructor (nombre, precio, color){

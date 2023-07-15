@@ -1,22 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Delius&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue&family=Delius&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue&family=Delius&display=swap");
-/*@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
 
 
-.logo {
-    height: 165px;
-    width: 100%;
-    background-color: rgb(247, 184, 247);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+
+    #header {
+        display: flex;
+        align-items: center;
+        background-color: #2A73B7;
+    }
+    
+    .logo {
+        margin-right: auto;
+    }
+    
+    .navBar {
+        display: flex;
+        align-items: center;
+    }
+    
+    .navToggle {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    .navMenu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navItem {
+        margin-right: 10px;
+    }
+    
+    .navLink {
+        text-decoration: none;
+        color:white;
+    }
+    
 
 .logo img {
-    height: 200px;
-    width: 220px;
+    height: 180px;
+    width: 200px;
 }
+
+
+
+
+
+
+
+
 
 .hero {
     text-align: center;
@@ -155,7 +198,7 @@
     padding: 8px;
     border-radius: 8px;
     border: none;
-    background-color:#BC9FBB;
+    background-color: #BC9FBB;
     width: 97%;
     margin-left: 6px;
 }
@@ -181,4 +224,37 @@
 }
 
 
+/*formulario*/
 
+/*
+body {
+    background-image: url(/img/fondoLogueo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+*/
+.resultados {
+    position: fixed;
+    right: 1%;
+    padding: 5px;
+    bottom: 100px;
+    align-items: center;
+    background-color: #F1C9D6;
+    width: 200px;
+    height: 121 px;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px
+}
+
+.resultados h3 {
+    margin-bottom: 10px;
+}
+
+/* Estilos para mensajes */
+p.mensaje {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
